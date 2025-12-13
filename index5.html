@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vertex Lex Attorneys — Precision. Strategy. Justice.</title>
+
+<style>
+:root{
+  --gold:#c9a24d;
+  --text:#1b1f2a;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --soft:#f4f1ec;
+  --container:1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Georgia","Times New Roman",serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--soft);
+  font-size:13px;
+}
+.topbar-inner{
+  max-width:var(--container);
+  margin:auto;
+  padding:6px 20px;
+  display:flex;
+  justify-content:space-between;
+  color:#555;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.header-inner{
+  max-width:var(--container);
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  align-items:center;
+}
+.brand{
+  display:flex;
+  flex-direction:column;
+}
+.logo{
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.logo span{color:var(--gold)}
+.tagline{
+  font-size:12px;
+  letter-spacing:2px;
+  color:#777;
+}
+nav{
+  margin-left:auto;
+}
+nav a{
+  text-decoration:none;
+  margin-left:20px;
+  color:#222;
+  font-weight:600;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  max-width:var(--container);
+  margin:auto;
+  padding:70px 20px;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.hero h1{
+  font-size:42px;
+  margin:0;
+}
+.hero p{
+  color:var(--muted);
+  max-width:520px;
+}
+.cta{margin-top:20px}
+.btn{
+  background:var(--gold);
+  color:#fff;
+  padding:12px 22px;
+  text-decoration:none;
+  font-weight:700;
+  margin-right:12px;
+}
+.btn-outline{
+  background:transparent;
+  border:1px solid #333;
+  color:#333;
+}
+.hero img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* SECTIONS */
+section{
+  max-width:var(--container);
+  margin:auto;
+  padding:70px 20px;
+}
+.section-title{
+  font-size:28px;
+  margin-bottom:10px;
+}
+.section-sub{
+  color:var(--muted);
+  max-width:650px;
+  margin-bottom:40px;
+}
+
+/* TEAM */
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.team-card{
+  border:1px solid #eee;
+  padding:26px;
+  text-align:center;
+}
+.avatar{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:var(--soft);
+  margin:0 auto 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  font-weight:700;
+  color:var(--gold);
+}
+.role{
+  font-size:13px;
+  letter-spacing:1px;
+  color:#777;
+  margin-bottom:10px;
+}
+
+/* PRACTICE AREAS */
+.practice-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.practice-card{
+  background:var(--soft);
+  padding:30px 26px;
+  text-align:center;
+  border-radius:4px;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.practice-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.practice-card h3{
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.practice-card p{
+  font-size:14px;
+  color:#555;
+}
+.icon{
+  font-size:28px;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 350px;
+  gap:30px;
+}
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border:1px solid #ccc;
+}
+button{
+  background:var(--gold);
+  color:#fff;
+  border:none;
+  padding:12px;
+  font-weight:700;
+  margin-top:10px;
+  width:100%;
+}
+
+/* FOOTER */
+footer{
+  border-top:1px solid #eee;
+  padding:30px 20px;
+  text-align:center;
+  color:#777;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .team-grid,
+  .practice-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>Serving: New Delhi</span>
+    <span>Call: +91 81023 49667</span>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="logo">VERTEX <span>LEX</span></div>
+      <div class="tagline">ATTORNEYS AT LAW</div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#practice">Practice Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero reveal">
+  <div>
+    <h1>The Right Advice Matters.</h1>
+    <p>
+      Strategic legal counsel and disciplined advocacy across litigation,
+      advisory and regulatory matters.
+    </p>
+    <div class="cta">
+      <a href="#contact" class="btn">Book a Consult</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="City">
+</div>
+
+<section id="about" class="reveal">
+  <h2 class="section-title">About the Firm</h2>
+  <p class="section-sub">
+    Vertex Lex Attorneys represents clients before District Courts, High Courts
+    and the Hon’ble Supreme Court of India with integrity, preparation and
+    research-led advocacy.
+  </p>
+</section>
+
+<section id="team" class="reveal">
+  <h2 class="section-title">Meet the Team</h2>
+  <p class="section-sub">Experienced professionals delivering strategic legal solutions.</p>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="avatar">SF</div>
+      <h3>Shams Firdaus</h3>
+      <div class="role">Managing Partner</div>
+      <p>Criminal law, constitutional litigation and regulatory advisory.</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">A</div>
+      <h3>Associate Counsel</h3>
+      <div class="role">Litigation</div>
+      <p>Drafting, research and court representation.</p>
+    </div>
+    <div class="team-card">
+      <div class="avatar">L</div>
+      <h3>Legal Associate</h3>
+      <div class="role">Compliance</div>
+      <p>Corporate and regulatory advisory.</p>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="reveal">
+  <h2 class="section-title" style="text-align:center">Practice Areas</h2>
+  <p class="section-sub" style="text-align:center;margin:auto">
+    At Vertex Lex Attorneys, we provide the following legal services.
+  </p>
+
+  <div class="practice-grid">
+    <div class="practice-card">
+      <div class="icon">⚖</div>
+      <h3>Separation & Divorce</h3>
+      <p>
+        Planning a new life after separation requires proper legal guidance
+        to ensure a secure and fair transition.
+      </p>
+    </div>
+
+    <div class="practice-card">
+      <div class="icon">⚖</div>
+      <h3>Guardianship, Custody & Parenting Time</h3>
+      <p>
+        Assistance in child custody, parenting schedules and contact
+        arrangements with a child-focused approach.
+      </p>
+    </div>
+
+    <div class="practice-card">
+      <div class="icon">⚖</div>
+      <h3>Spousal & Child Support</h3>
+      <p>
+        Advisory on financial support involving income, assets and long-term
+        financial security.
+      </p>
+    </div>
+
+    <div class="practice-card">
+      <div class="icon">⚖</div>
+      <h3>Matrimonial & Family Property Division</h3>
+      <p>
+        Strategic representation to protect your rightful share of family and
+        matrimonial assets.
+      </p>
+    </div>
+
+    <div class="practice-card">
+      <div class="icon">⚖</div>
+      <h3>Cohabitation & Prenuptial Agreements</h3>
+      <p>
+        Carefully drafted agreements to safeguard assets and responsibilities
+        before entering a relationship.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <div>
+      <p><strong>Address:</strong> L-70, Lajpat Nagar II, New Delhi</p>
+      <p><strong>Phone:</strong> +91 81023 49667</p>
+      <p><strong>Email:</strong> info@vertexlex.in</p>
+    </div>
+    <form>
+      <input placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button>Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © Vertex Lex Attorneys — All Rights Reserved
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add("active")}
+  });
+},{threshold:0.15});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
